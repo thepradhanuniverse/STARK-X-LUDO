@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STARK X LUDO - Play • Trust • Win</title>
+
+  <link rel="icon" type="image/jpeg" href="./logo.jpeg">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(5, 8, 13, 0.72), rgba(5, 8, 13, 0.82)),
+        url("./background.jpg") center center / cover fixed no-repeat;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px 14px;
+      overflow-x: hidden;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 470px;
+      position: relative;
+    }
+
+    .card {
+      width: 100%;
+      background: rgba(5, 8, 13, 0.96);
+      border: 1px solid rgba(255, 210, 28, 0.55);
+      border-radius: 28px;
+      padding: 24px 20px 22px;
+      text-align: center;
+      box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.65),
+        inset 0 0 35px rgba(255, 210, 28, 0.035);
+      backdrop-filter: blur(5px);
+    }
+
+    .ribbon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #ffd21c, #ffb800);
+      color: #111827;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      margin-bottom: 17px;
+      box-shadow: 0 7px 20px rgba(255, 210, 28, 0.16);
+    }
+
+    .logo {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow:
+        0 0 0 3px rgba(255, 210, 28, 0.18),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand {
+      font-size: 31px;
+      line-height: 1.05;
+      font-weight: 1000;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .brand .x {
+      color: #ffd21c;
+    }
+
+    .tagline {
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-top: 8px;
+    }
+
+    .dice {
+      font-size: 31px;
+      margin: 13px 0 14px;
+      display: inline-block;
+      animation: diceFloat 2.5s ease-in-out infinite;
+    }
+
+    @keyframes diceFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-5px) rotate(4deg);
+      }
+    }
+
+    .join-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1597f2, #2563eb);
+      padding: 16px 18px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-weight: 1000;
+      letter-spacing: 0.3px;
+      box-shadow:
+        0 10px 25px rgba(21, 151, 242, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 19px;
+    }
+
+    .join-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 14px 30px rgba(21, 151, 242, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .join-btn:active {
+      transform: scale(0.98);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .feature {
+      min-height: 67px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 12px 8px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.035);
+      color: #f8fafc;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      line-height: 1.25;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: featureIn 0.55s ease forwards;
+    }
+
+    .feature:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .feature:nth-child(2) {
+      animation-delay: 0.18s;
+    }
+
+    .feature:nth-child(3) {
+      animation-delay: 0.26s;
+    }
+
+    .feature:nth-child(4) {
+      animation-delay: 0.34s;
+    }
+
+    .feature:nth-child(5) {
+      animation-delay: 0.42s;
+      grid-column: 1 / -1;
+    }
+
+    @keyframes featureIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feature i {
+      color: #ffd21c;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .bottom-text {
+      margin-top: 18px;
+      color: #cbd5e1;
+      font-size: 12px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .bottom-text strong {
+      color: #ffd21c;
+    }
+
+    .footer-line {
+      margin-top: 14px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 210, 28, 0.28),
+        transparent
+      );
+    }
+
+    .copyright {
+      margin-top: 10px;
+      color: #64748b;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 380px) {
+      body {
+        padding: 14px 10px;
+      }
+
+      .card {
+        padding: 21px 15px 19px;
+        border-radius: 23px;
+      }
+
+      .logo {
+        width: 112px;
+        height: 112px;
+      }
+
+      .brand {
+        font-size: 27px;
+      }
+
+      .tagline {
+        font-size: 11px;
+        letter-spacing: 2.3px;
+      }
+
+      .feature {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="card">
+
+      <div class="ribbon">
+        🏛️ GOVERNMENT CERTIFIED GROUP 🏅
+      </div>
+
+      <img
+        src="./logo.jpeg"
+        alt="STARK X LUDO Logo"
+        class="logo"
+      >
+
+      <h1 class="brand">
+        STARK <span class="x">X</span> LUDO
+      </h1>
+
+      <div class="tagline">
+        PLAY • TRUST • WIN
+      </div>
+
+      <div class="dice">
+        🎲 🎲
+      </div>
+
+      <a
+        class="join-btn"
+        href="https://telegram.me/+RZmvANIvwv4yNTFl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-telegram"></i>
+        🎲 JOIN STARK X LUDO
+      </a>
+
+      <div class="features">
+
+        <div class="feature">
+          <i class="fa-solid fa-bolt"></i>
+          <span>FASTEST WITHDRAWAL</span>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-coins"></i>
+          <span>LOWEST COMMISSION</span>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-gift"></i>
+          <span>DAILY REWARDS</span>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-trophy"></i>
+          <span>WEEKLY PRIZES</span>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-handshake"></i>
+          <span>TRUSTED COMMUNITY</span>
+        </div>
+
+      </div>
+
+      <p class="bottom-text">
+        🎲 Join <strong>STARK X LUDO</strong> and experience a trusted
+        community with exciting rewards, weekly prizes, and more.
+      </p>
+
+      <div class="footer-line"></div>
+
+      <div class="copyright">
+        © STARK X LUDO • PLAY • TRUST • WIN
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
