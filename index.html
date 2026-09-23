@@ -1,41 +1,83 @@
  <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4634843846793315');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+
+    }(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init', '4634843846793315');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=4634843846793315&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>STARK X LUDO - Play • Trust • Win</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="icon" type="image/jpeg" href="./logo.jpeg">
+  <title>STARK X LUDO - Play • Trust • Connect</title>
+
+  <link
+    rel="icon"
+    type="image/jpeg"
+    href="./logo.jpeg"
+  >
 
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
 
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
 
     html,
     body {
@@ -43,90 +85,136 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       min-height: 100%;
     }
 
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       background:
+
         linear-gradient(
           rgba(5, 8, 13, 0.42),
           rgba(5, 8, 13, 0.58)
         ),
-        url("./background.jpg") center center / cover fixed no-repeat;
+
+        url("./background.jpg")
+        center center /
+        cover fixed no-repeat;
 
       color: #ffffff;
+
       display: flex;
+
       justify-content: center;
+
       align-items: center;
+
       padding: 22px 14px;
+
       overflow-x: hidden;
     }
 
+
     .page {
+
       width: 100%;
+
       max-width: 470px;
+
       position: relative;
     }
 
-    /* MAIN GLASS CARD */
+
+    /* MAIN CARD */
 
     .card {
+
       width: 100%;
 
       background:
+
         linear-gradient(
           145deg,
           rgba(5, 8, 13, 0.82),
           rgba(10, 15, 25, 0.72)
         );
 
-      border: 1px solid rgba(255, 210, 28, 0.55);
+      border:
+        1px solid
+        rgba(255, 210, 28, 0.55);
+
       border-radius: 28px;
 
-      padding: 24px 20px 22px;
+      padding:
+        24px 20px 22px;
 
       text-align: center;
 
       box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.65),
-        inset 0 0 40px rgba(255, 210, 28, 0.025);
+
+        0 25px 70px
+        rgba(0, 0, 0, 0.65),
+
+        inset 0 0 40px
+        rgba(255, 210, 28, 0.025);
 
       backdrop-filter: blur(7px);
+
       -webkit-backdrop-filter: blur(7px);
 
       position: relative;
+
       overflow: hidden;
     }
 
-    /* SUBTLE CARD LIGHT */
+
+    /* CARD LIGHT */
 
     .card::before {
+
       content: "";
+
       position: absolute;
+
       width: 220px;
+
       height: 220px;
 
-      background: rgba(255, 210, 28, 0.055);
+      background:
+        rgba(255, 210, 28, 0.055);
 
       border-radius: 50%;
 
       filter: blur(60px);
 
       top: -100px;
+
       left: 50%;
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
 
       pointer-events: none;
     }
 
-    /* RIBBON */
+
+    /* COMMUNITY BADGE */
 
     .ribbon {
+
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
+
       gap: 6px;
 
       background:
+
         linear-gradient(
           135deg,
           #ffe04a,
@@ -136,57 +224,85 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       color: #111827;
 
       font-size: 12px;
+
       font-weight: 900;
 
       letter-spacing: 0.5px;
 
-      padding: 8px 15px;
+      padding:
+        8px 15px;
 
       border-radius: 999px;
 
       margin-bottom: 18px;
 
       box-shadow:
-        0 7px 25px rgba(255, 210, 28, 0.25);
+        0 7px 25px
+        rgba(255, 210, 28, 0.25);
 
       position: relative;
+
       z-index: 2;
 
-      animation: ribbonGlow 2.8s ease-in-out infinite;
+      animation:
+        ribbonGlow
+        2.8s
+        ease-in-out
+        infinite;
     }
 
+
     @keyframes ribbonGlow {
-      0%, 100% {
+
+      0%,
+      100% {
+
         box-shadow:
-          0 7px 20px rgba(255, 210, 28, 0.18);
+          0 7px 20px
+          rgba(255, 210, 28, 0.18);
       }
 
       50% {
+
         box-shadow:
-          0 7px 30px rgba(255, 210, 28, 0.42);
+          0 7px 30px
+          rgba(255, 210, 28, 0.42);
       }
+
     }
+
 
     /* LOGO */
 
     .logo-wrap {
+
       width: 140px;
+
       height: 140px;
 
-      margin: 0 auto 10px;
+      margin:
+        0 auto 10px;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       border-radius: 50%;
 
       position: relative;
 
-      animation: logoFloat 3.5s ease-in-out infinite;
+      animation:
+        logoFloat
+        3.5s
+        ease-in-out
+        infinite;
     }
 
+
     .logo-wrap::before {
+
       content: "";
 
       position: absolute;
@@ -196,6 +312,7 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       border-radius: 50%;
 
       background:
+
         radial-gradient(
           circle,
           rgba(255, 210, 28, 0.35),
@@ -205,13 +322,20 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       filter: blur(5px);
 
-      animation: logoGlow 2.4s ease-in-out infinite;
+      animation:
+        logoGlow
+        2.4s
+        ease-in-out
+        infinite;
 
       z-index: 0;
     }
 
+
     .logo {
+
       width: 128px;
+
       height: 128px;
 
       object-fit: cover;
@@ -220,43 +344,71 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       border-radius: 50%;
 
-      border: 4px solid #ffffff;
+      border:
+        4px solid
+        #ffffff;
 
       position: relative;
+
       z-index: 1;
 
       box-shadow:
-        0 0 0 3px rgba(255, 210, 28, 0.20),
-        0 0 28px rgba(255, 210, 28, 0.30),
-        0 15px 35px rgba(0, 0, 0, 0.55);
+
+        0 0 0 3px
+        rgba(255, 210, 28, 0.20),
+
+        0 0 28px
+        rgba(255, 210, 28, 0.30),
+
+        0 15px 35px
+        rgba(0, 0, 0, 0.55);
     }
 
+
     @keyframes logoFloat {
-      0%, 100% {
-        transform: translateY(0);
+
+      0%,
+      100% {
+        transform:
+          translateY(0);
       }
 
       50% {
-        transform: translateY(-7px);
+        transform:
+          translateY(-7px);
       }
+
     }
 
+
     @keyframes logoGlow {
-      0%, 100% {
-        transform: scale(0.95);
+
+      0%,
+      100% {
+
+        transform:
+          scale(0.95);
+
         opacity: 0.55;
       }
 
       50% {
-        transform: scale(1.08);
+
+        transform:
+          scale(1.08);
+
         opacity: 1;
       }
+
     }
+
 
     /* BRAND */
 
     .brand {
+
       font-size: 31px;
+
       line-height: 1.05;
 
       font-weight: 1000;
@@ -266,20 +418,27 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       margin-top: 2px;
 
       position: relative;
+
       z-index: 2;
 
       text-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.55);
+        0 3px 15px
+        rgba(0, 0, 0, 0.55);
     }
 
+
     .brand .x {
+
       color: #ffd21c;
 
       text-shadow:
-        0 0 15px rgba(255, 210, 28, 0.55);
+        0 0 15px
+        rgba(255, 210, 28, 0.55);
     }
 
+
     .tagline {
+
       color: #dbe4f0;
 
       font-size: 13px;
@@ -291,37 +450,60 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       margin-top: 8px;
 
       position: relative;
+
       z-index: 2;
     }
+
 
     /* DICE */
 
     .dice {
+
       font-size: 31px;
 
-      margin: 13px 0 15px;
+      margin:
+        13px 0 15px;
 
       display: inline-block;
 
-      animation: diceFloat 2.5s ease-in-out infinite;
+      animation:
+        diceFloat
+        2.5s
+        ease-in-out
+        infinite;
 
       filter:
-        drop-shadow(0 7px 12px rgba(0, 0, 0, 0.45));
+        drop-shadow(
+          0 7px 12px
+          rgba(0, 0, 0, 0.45)
+        );
     }
 
+
     @keyframes diceFloat {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
       }
 
       50% {
-        transform: translateY(-6px) rotate(4deg);
+
+        transform:
+          translateY(-6px)
+          rotate(4deg);
       }
+
     }
 
-    /* CTA */
+
+    /* TELEGRAM CTA */
 
     .join-btn {
+
       width: 100%;
 
       display: flex;
@@ -337,13 +519,15 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       color: #ffffff;
 
       background:
+
         linear-gradient(
           135deg,
           #1597f2,
           #2563eb
         );
 
-      padding: 17px 18px;
+      padding:
+        17px 18px;
 
       border-radius: 16px;
 
@@ -358,9 +542,15 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       overflow: hidden;
 
       box-shadow:
-        0 10px 30px rgba(21, 151, 242, 0.38),
-        0 0 20px rgba(37, 99, 235, 0.20),
-        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+
+        0 10px 30px
+        rgba(21, 151, 242, 0.38),
+
+        0 0 20px
+        rgba(37, 99, 235, 0.20),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.20);
 
       transition:
         transform 0.2s ease,
@@ -368,23 +558,32 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       margin-bottom: 20px;
 
-      animation: buttonPulse 2.2s ease-in-out infinite;
+      animation:
+        buttonPulse
+        2.2s
+        ease-in-out
+        infinite;
     }
 
-    /* CTA SHINE */
+
+    /* BUTTON SHINE */
 
     .join-btn::before {
+
       content: "";
 
       position: absolute;
 
       top: 0;
+
       left: -120%;
 
       width: 70%;
+
       height: 100%;
 
       background:
+
         linear-gradient(
           110deg,
           transparent,
@@ -392,68 +591,112 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
           transparent
         );
 
-      transform: skewX(-20deg);
+      transform:
+        skewX(-20deg);
 
-      animation: buttonShine 3.2s ease-in-out infinite;
+      animation:
+        buttonShine
+        3.2s
+        ease-in-out
+        infinite;
     }
+
 
     .join-btn span,
     .join-btn i {
+
       position: relative;
+
       z-index: 2;
     }
 
+
     .join-btn i {
+
       font-size: 18px;
     }
 
+
     @keyframes buttonPulse {
-      0%, 100% {
+
+      0%,
+      100% {
+
         box-shadow:
-          0 10px 28px rgba(21, 151, 242, 0.30),
-          0 0 15px rgba(37, 99, 235, 0.15);
+
+          0 10px 28px
+          rgba(21, 151, 242, 0.30),
+
+          0 0 15px
+          rgba(37, 99, 235, 0.15);
       }
 
       50% {
+
         box-shadow:
-          0 12px 35px rgba(21, 151, 242, 0.50),
-          0 0 28px rgba(37, 99, 235, 0.30);
+
+          0 12px 35px
+          rgba(21, 151, 242, 0.50),
+
+          0 0 28px
+          rgba(37, 99, 235, 0.30);
       }
+
     }
 
+
     @keyframes buttonShine {
+
       0% {
         left: -120%;
       }
 
-      45%, 100% {
+      45%,
+      100% {
         left: 140%;
       }
+
     }
+
 
     .join-btn:hover {
-      transform: translateY(-3px) scale(1.01);
+
+      transform:
+        translateY(-3px)
+        scale(1.01);
 
       box-shadow:
-        0 16px 38px rgba(21, 151, 242, 0.55),
-        0 0 35px rgba(37, 99, 235, 0.30);
+
+        0 16px 38px
+        rgba(21, 151, 242, 0.55),
+
+        0 0 35px
+        rgba(37, 99, 235, 0.30);
     }
 
+
     .join-btn:active {
-      transform: scale(0.97);
+
+      transform:
+        scale(0.97);
     }
+
 
     /* FEATURES */
 
     .features {
+
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 11px;
     }
 
+
     .feature {
+
       min-height: 72px;
 
       display: flex;
@@ -464,13 +707,17 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       gap: 9px;
 
-      padding: 12px 9px;
+      padding:
+        12px 9px;
 
       border-radius: 16px;
 
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
 
       background:
+
         linear-gradient(
           145deg,
           rgba(255, 255, 255, 0.075),
@@ -493,10 +740,14 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       opacity: 0;
 
-      transform: translateY(15px);
+      transform:
+        translateY(15px);
 
       animation:
-        featureIn 0.6s ease forwards;
+        featureIn
+        0.6s
+        ease
+        forwards;
 
       transition:
         transform 0.25s ease,
@@ -505,20 +756,23 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         background 0.25s ease;
     }
 
-    /* FEATURE SHINE */
 
     .feature::before {
+
       content: "";
 
       position: absolute;
 
       top: 0;
+
       left: -130%;
 
       width: 80%;
+
       height: 100%;
 
       background:
+
         linear-gradient(
           110deg,
           transparent,
@@ -526,22 +780,30 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
           transparent
         );
 
-      transform: skewX(-20deg);
+      transform:
+        skewX(-20deg);
 
-      transition: 0.6s;
+      transition:
+        0.6s;
     }
 
+
     .feature:hover::before {
+
       left: 140%;
     }
 
+
     .feature:hover {
-      transform: translateY(-4px);
+
+      transform:
+        translateY(-4px);
 
       border-color:
         rgba(255, 210, 28, 0.28);
 
       background:
+
         linear-gradient(
           145deg,
           rgba(255, 210, 28, 0.08),
@@ -549,42 +811,61 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         );
 
       box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.35),
-        0 0 18px rgba(255, 210, 28, 0.08);
+
+        0 10px 25px
+        rgba(0, 0, 0, 0.35),
+
+        0 0 18px
+        rgba(255, 210, 28, 0.08);
     }
+
 
     .feature:nth-child(1) {
       animation-delay: 0.10s;
     }
 
+
     .feature:nth-child(2) {
       animation-delay: 0.18s;
     }
+
 
     .feature:nth-child(3) {
       animation-delay: 0.26s;
     }
 
+
     .feature:nth-child(4) {
       animation-delay: 0.34s;
     }
 
+
     .feature:nth-child(5) {
+
       animation-delay: 0.42s;
 
-      grid-column: 1 / -1;
+      grid-column:
+        1 / -1;
     }
+
 
     @keyframes featureIn {
+
       to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
+
     }
 
-    /* FEATURE EMOJIS */
+
+    /* FEATURE ICONS */
 
     .feature-emoji {
+
       font-size: 22px;
 
       line-height: 1;
@@ -592,41 +873,66 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       flex-shrink: 0;
 
       filter:
-        drop-shadow(0 3px 7px rgba(0, 0, 0, 0.35));
+        drop-shadow(
+          0 3px 7px
+          rgba(0, 0, 0, 0.35)
+        );
 
       animation:
-        emojiFloat 2.8s ease-in-out infinite;
+        emojiFloat
+        2.8s
+        ease-in-out
+        infinite;
     }
 
-    .feature:nth-child(2) .feature-emoji {
+
+    .feature:nth-child(2)
+    .feature-emoji {
       animation-delay: 0.4s;
     }
 
-    .feature:nth-child(3) .feature-emoji {
+
+    .feature:nth-child(3)
+    .feature-emoji {
       animation-delay: 0.8s;
     }
 
-    .feature:nth-child(4) .feature-emoji {
+
+    .feature:nth-child(4)
+    .feature-emoji {
       animation-delay: 1.2s;
     }
 
-    .feature:nth-child(5) .feature-emoji {
+
+    .feature:nth-child(5)
+    .feature-emoji {
       animation-delay: 1.6s;
     }
 
+
     @keyframes emojiFloat {
-      0%, 100% {
-        transform: translateY(0);
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0);
       }
 
       50% {
-        transform: translateY(-3px) scale(1.05);
+
+        transform:
+          translateY(-3px)
+          scale(1.05);
       }
+
     }
+
 
     /* BOTTOM TEXT */
 
     .bottom-text {
+
       margin-top: 19px;
 
       color: #d1d9e5;
@@ -638,21 +944,27 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       font-weight: 600;
     }
 
+
     .bottom-text strong {
+
       color: #ffd21c;
 
       text-shadow:
-        0 0 10px rgba(255, 210, 28, 0.25);
+        0 0 10px
+        rgba(255, 210, 28, 0.25);
     }
+
 
     /* FOOTER */
 
     .footer-line {
+
       margin-top: 15px;
 
       height: 1px;
 
       background:
+
         linear-gradient(
           90deg,
           transparent,
@@ -661,7 +973,9 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         );
     }
 
+
     .copyright {
+
       margin-top: 10px;
 
       color: #8390a3;
@@ -671,66 +985,98 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       letter-spacing: 0.5px;
     }
 
-    /* SMALL SCREEN */
+
+    /* MOBILE */
 
     @media (max-width: 380px) {
 
       body {
-        padding: 14px 10px;
+
+        padding:
+          14px 10px;
       }
 
+
       .card {
-        padding: 21px 15px 19px;
+
+        padding:
+          21px 15px 19px;
 
         border-radius: 23px;
       }
 
+
       .logo-wrap {
+
         width: 124px;
+
         height: 124px;
       }
 
+
       .logo {
+
         width: 114px;
+
         height: 114px;
       }
 
+
       .brand {
+
         font-size: 27px;
       }
 
+
       .tagline {
+
         font-size: 11px;
+
         letter-spacing: 2.3px;
       }
 
+
       .feature {
+
         font-size: 10px;
+
         min-height: 66px;
       }
 
+
       .feature-emoji {
+
         font-size: 20px;
       }
 
+
       .join-btn {
+
         font-size: 15px;
       }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
+
   <main class="page">
+
 
     <section class="card">
 
-      <!-- GOVERNMENT CERTIFICATION -->
+
+      <!-- COMMUNITY BADGE -->
 
       <div class="ribbon">
-        🏛️ GOVERNMENT CERTIFIED GROUP 🏅
+
+        🎮 LUDO GAMING COMMUNITY
+
       </div>
 
 
@@ -750,23 +1096,29 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       <!-- BRAND -->
 
       <h1 class="brand">
+
         STARK <span class="x">X</span> LUDO
+
       </h1>
 
 
       <div class="tagline">
-        PLAY • TRUST • WIN
+
+        PLAY • TRUST • CONNECT
+
       </div>
 
 
       <!-- DICE -->
 
       <div class="dice">
+
         🎲 🎲
+
       </div>
 
 
-      <!-- CTA -->
+      <!-- TELEGRAM CTA -->
 
       <a
         class="join-btn"
@@ -778,13 +1130,15 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         <i class="fa-brands fa-telegram"></i>
 
         <span>
+
           🎲 JOIN STARK X LUDO
+
         </span>
 
       </a>
 
 
-      <!-- FEATURES -->
+      <!-- COMMUNITY FEATURES -->
 
       <div class="features">
 
@@ -792,11 +1146,11 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         <div class="feature">
 
           <span class="feature-emoji">
-            ⚡
+            🎮
           </span>
 
           <span>
-            FASTEST WITHDRAWAL
+            PLAY LUDO
           </span>
 
         </div>
@@ -805,24 +1159,11 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
         <div class="feature">
 
           <span class="feature-emoji">
-            💎
+            👥
           </span>
 
           <span>
-            LOWEST COMMISSION
-          </span>
-
-        </div>
-
-
-        <div class="feature">
-
-          <span class="feature-emoji">
-            🎁
-          </span>
-
-          <span>
-            DAILY REWARDS
+            ACTIVE COMMUNITY
           </span>
 
         </div>
@@ -835,7 +1176,20 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
           </span>
 
           <span>
-            WEEKLY PRIZES
+            FRIENDLY COMPETITION
+          </span>
+
+        </div>
+
+
+        <div class="feature">
+
+          <span class="feature-emoji">
+            🎯
+          </span>
+
+          <span>
+            SKILL &amp; FUN
           </span>
 
         </div>
@@ -857,14 +1211,14 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
       </div>
 
 
-      <!-- BOTTOM PROMO -->
+      <!-- BOTTOM TEXT -->
 
       <p class="bottom-text">
 
         🎲 Join
         <strong>STARK X LUDO</strong>
-        and experience a trusted community with exciting rewards,
-        weekly prizes, and more.
+        and connect with a community of Ludo players,
+        share your gameplay and enjoy the game together.
 
       </p>
 
@@ -874,14 +1228,17 @@ src="https://www.facebook.com/tr?id=1088375030386300&ev=PageView&noscript=1"
 
       <div class="copyright">
 
-        © STARK X LUDO • PLAY • TRUST • WIN
+        © STARK X LUDO • PLAY • TRUST • CONNECT
 
       </div>
 
 
     </section>
 
+
   </main>
 
+
 </body>
+
 </html>
